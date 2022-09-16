@@ -150,16 +150,21 @@ EleProbeVariablesToStore = cms.PSet(
     # el_inner_lost_hitsHEEP=cms.string(
     #     "gsfTrack->hitPattern().numberOfAllHits(reco::HitPattern::HitCategory::MISSING_INNER_HITS)"),
 
+    el_inner_lost_hitsHEEP=cms.string(
+        "gsfTrack.hitPattern.numberOfLostHits('MISSING_INNER_HITS')"),
+
+
+
     # dr03TkSumPtHEEP_option01=cms.InputTag("heepIDVarValueMaps", "eleTrkPtIso"),
 
     # dr03TkSumPtHEEP_option03=cms.string("dr03TkSumPt()"),
     # dr04TkSumPtHEEP_option04=cms.string("dr04TkSumPt()"),
-    dr04EcalRecHitSumEtHEEP=cms.string("dr04EcalRecHitSumEt()"),
-    dr04HcalTowerSumEtHEEP=cms.string("dr04HcalTowerSumEt()"),
-    dr04HcalDepth1TowerSumEtHEEP=cms.string("dr04HcalDepth1TowerSumEt()"),
-    dr04HcalDepth2TowerSumEtHEEP=cms.string("dr04HcalDepth2TowerSumEt()"),
+    dr04EcalRecHitSumEtHEEP=cms.string("dr04EcalRecHitSumEt"),
+    dr04HcalTowerSumEtHEEP=cms.string("dr04HcalTowerSumEt"),
+    dr04HcalDepth1TowerSumEtHEEP=cms.string("dr04HcalDepth1TowerSumEt"),
+    dr04HcalDepth2TowerSumEtHEEP=cms.string("dr04HcalDepth2TowerSumEt"),
     dr03TkSumPtHEEP=cms.string("dr03TkSumPt"),
-    dr03TkSumPtHEEPHEEP=cms.string("dr03TkSumPtHEEP"),
+    dr03TkSumPtHEEPHEEP=cms.string("dr03TkSumPtHEEP"),  # <-- Track Iso
     dr03EcalRecHitSumEtHEEP=cms.string("dr03EcalRecHitSumEt"),
     dr03HcalDepth1TowerSumEtHEEP=cms.string("dr03HcalDepth1TowerSumEt"),
     dr03HcalDepth2TowerSumEtHEEP=cms.string("dr03HcalDepth2TowerSumEt"),
